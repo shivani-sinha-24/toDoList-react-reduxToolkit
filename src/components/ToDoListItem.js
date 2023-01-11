@@ -9,7 +9,7 @@ const ToDoListItem = (props) => {
   //   console.log("item id to be delete : " + id);
   //   setItem(prevItems=>prevItems.filter((item,index)=>index!==id))
   // } 
-  
+
   const dispatch = useDispatch()
   
   const toggleTextStyle = () => {
@@ -23,10 +23,10 @@ const ToDoListItem = (props) => {
       </li>
       <button className="btn btn-light" 
       // onClick={()=>{props.deleteItem(props.id)}}
-      onClick={()=>{dispatch(deleteListItem(props.item?.id))}}
+      onClick={()=>{console.log(props.item.id);dispatch(deleteListItem(props.item.id))}}
       >
           <span className="p-2 flex-shrink-1" >-</span>
-          {console.log(props.id)}
+          {/* {console.log(props.id)} */}
         </button>
     </div>
   );

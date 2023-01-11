@@ -26,7 +26,8 @@ export const toDoListSlice = createSlice({
         },
         deleteListItem:{
             reducer(state,action){
-                state?.splice(state?.findIndex(list=> list.id===action.payload),1)
+                // return state.filter(el => el?.id !== action.payload.listItemId)
+                state?.splice(state?.findIndex(list=> list.id===action.payload.listItemId),1)
             },
             prepare(listItemId){
                 return{
