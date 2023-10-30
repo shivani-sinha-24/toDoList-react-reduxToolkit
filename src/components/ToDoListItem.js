@@ -6,7 +6,6 @@ const ToDoListItem = (props) => {
   const [itemChecked, setItemChecked] = useState(false);
 
   // const deleteItems = (id) => {
-  //   console.log("item id to be delete : " + id);
   //   setItem(prevItems=>prevItems.filter((item,index)=>index!==id))
   // } 
 
